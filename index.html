@@ -94,25 +94,25 @@
                             <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="col-8 justify-self-center offset-md-3">
-                                <h2>Uthappizza <span class="badge badge-danger">HOT</span>
-                                <span class="badge badge-pill badge-default">$4.99</span> Uthappizza</h2>
-                                <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and
-                                Italian pizza, topped with Cerignola olives, ripe vine
-                                cherry tomatoes, Vidalia onion, Guntur chillies andBuffalo Paneer.
-                                </p>
+                                    <h2>Uthappizza <span class="badge badge-danger">HOT</span>
+                                    <span class="badge badge-pill badge-default">$4.99</span> Uthappizza</h2>
+                                    <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and
+                                    Italian pizza, topped with Cerignola olives, ripe vine
+                                    cherry tomatoes, Vidalia onion, Guntur chillies andBuffalo Paneer.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block img-fluid" src="img/buffet.png" alt="Uthappizza">
                             <div class="carousel-caption d-none d-md-block">
-                                    <div class="col-8 justify-self-center offset-md-3">
+                                <div class="col-8 justify-self-center offset-md-3">
                                     <h2>Weekend Grand Buffet <span class="badge badge-danger">New</span></h2>
                                     <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different 
                                         salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing 
                                         bubbly and soft drinks. All for just $19.99 per person
                                     </p>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -141,11 +141,19 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"> </span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"> </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class = "row row-content align-items-center">
-            <div class ="col-sm-4 col-md-3 flex-last ">
+            <div class ="col-sm-4 col-md-3 flex-last">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-sm col-md-9 flex-first">
@@ -336,7 +344,17 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel({ interval:2000 });
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
 </body>
 
 </html>
