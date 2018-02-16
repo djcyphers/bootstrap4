@@ -10,3 +10,16 @@ $("#carousel-button").click(function(){
         $("#carousel-button").children("span").addClass('fa-pause'); 
     }
 });
+
+$( document ).ready(function() {
+
+    //Login
+    $('#loginButton').attr('data-target','#loginModal');
+    $('#loginButton').attr('data-toggle','modal');
+
+    //Reservations
+    $('#reserveButton').attr('data-target','#reserveModal');
+    $('#reserveButton').attr('data-toggle','modal');
+
+
+});
